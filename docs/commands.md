@@ -1,4 +1,4 @@
-There are many commands available to help you build and test sites. Here are a few highlights to get started with.
+There are many commands available to help you build and test sites. Here are a few highlights to get started with
 
 ## Watch For Changes & Automatically Refresh Across Devices
 

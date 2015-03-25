@@ -1,50 +1,56 @@
-/*!
- *
- *  Web Starter Kit
- *  Copyright 2014 Google Inc. All rights reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *    https://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License
- *
- */
-(function () {
-  'use strict';
-
-  var querySelector = document.querySelector.bind(document);
-
-  var navdrawerContainer = querySelector('.navdrawer-container');
-  var body = document.body;
-  var appbarElement = querySelector('.app-bar');
-  var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
-
-  function closeMenu() {
-    body.classList.remove('open');
-    appbarElement.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
-  }
-
-  function toggleMenu() {
-    body.classList.toggle('open');
-    appbarElement.classList.toggle('open');
-    navdrawerContainer.classList.toggle('open');
-    navdrawerContainer.classList.add('opened');
-  }
-
-  main.addEventListener('click', closeMenu);
-  menuBtn.addEventListener('click', toggleMenu);
-  navdrawerContainer.addEventListener('click', function (event) {
-    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      closeMenu();
+particlesJS('particles-js', {
+  particles: {
+    color: '#F1512B',
+    color_random: true,
+    shape: 'circle', // "circle", "edge" or "triangle"
+    opacity: {
+      opacity: 0.2,
+      anim: {
+        enable: true,
+        speed: 0.4,
+        opacity_min: 0.7,
+        sync: false
+      }
+    },
+    size: 15,
+    size_random: true,
+    nb: 20,
+    line_linked: {
+      enable_auto: true,
+      distance: 100,
+      color: '#F1512B',
+      opacity: 1,
+      width: 1,
+      condensed_mode: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 600
+      }
+    },
+    anim: {
+      enable: true,
+      speed: 0.25
     }
-  });
-})();
+  },
+  interactivity: {
+    enable: true,
+    mouse: {
+      distance: 700
+    },
+    detect_on: 'canvas', // "canvas" or "window"
+    mode: 'grab', // "grab" of false
+    line_linked: {
+      opacity: .5
+    },
+    events: {
+      onresize: {
+        enable: true,
+        mode: 'out', // "out" or "bounce"
+        density_auto: false,
+        density_area: 800 // nb_particles = particles.nb * (canvas width *  canvas height / 1000) / density_area
+      }
+    }
+  },
+  /* Retina Display Support */
+  retina_detect: true
+});
