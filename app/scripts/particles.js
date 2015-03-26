@@ -266,7 +266,7 @@ function launchParticlesJS(tag_id, params){
     if(pJS.particles.color_random){
       this.color = {
         r: (Math.floor(Math.random() * (255 - 0 + 1)) + 0),
-        g: (Math.floor(Math.random() * (255 - 100 + 1)) + 0),
+        g: (Math.floor(Math.random() * (255 - 200 + 1)) + 0),
         b: (Math.floor(Math.random() * (255 - 240 + 1)) + 0)
       }
     }else{
